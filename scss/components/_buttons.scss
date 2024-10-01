@@ -1,5 +1,4 @@
 // Filter button
-
 .filter-btn {
     display: flex;
     align-items: center;
@@ -18,7 +17,6 @@
 }
 
 // Like button
-
 .like-btn {
     display: flex;
     align-items: center;
@@ -28,13 +26,13 @@
     height: 50px;
     border-radius: 50%;
 
-    box-shadow: 0px 20px 60px var(--like-btn-shadow);
+    box-shadow: 0px 20px 60px rgba(124, 124, 124, 0.2);
 
-    &:not(&--liked) .like-btn__icon--liked {
+    &:not(&--liked) &__icon--liked {
         display: none;
     }
 
-    &--liked .like-btn__icon {
+    &--liked &__icon {
         display: none;
     }
 
@@ -48,20 +46,23 @@
 .btn {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
 
     height: 46px;
     padding: 0 20px;
     border-radius: 6px;
 
-    background: #f8f8f8;
+    background: #f8f8fb;
 
     font-size: 1.8rem;
     font-weight: 500;
-
     user-select: none;
 
     + .btn {
-        margin-left: 20px;
+        &:not(.btn--no-margin) {
+            margin-left: 20px;
+        }
     }
 
     &--text {
@@ -71,7 +72,7 @@
     }
 
     &--primary {
-        color: #1a162e;
+        color: #171c28;
         background: #ffb700;
     }
 
@@ -84,7 +85,7 @@
         border-radius: 99px;
     }
 
-    [disabled],
+    &[disabled],
     &--disabled {
         opacity: 0.5;
         pointer-events: none;
