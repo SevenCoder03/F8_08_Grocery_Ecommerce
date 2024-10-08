@@ -80,7 +80,7 @@
         width: 65px;
         height: 65px;
         object-fit: contain;
-        border: 1.5px solid rgb(158, 157, 168, 0.3);
+        border: 1px solid rgb(158, 157, 168, 0.3);
         border-radius: 8px;
         opacity: 0.9;
         transition: opacity, border-color;
@@ -217,10 +217,6 @@
 }
 
 .prod-tab {
-    &__text-content {
-        margin-top: -20px;
-    }
-
     &__list {
         display: flex;
         align-items: center;
@@ -265,6 +261,10 @@
         &--current {
             display: block;
         }
+    }
+
+    &__text-content {
+        margin-top: -20px;
     }
 }
 
